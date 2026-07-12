@@ -1,0 +1,7 @@
+.venv
+__pychache__
+*.pyc
+.git
+.gitignore
+-vscode
+README.md

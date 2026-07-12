@@ -1,12 +1,24 @@
 #Python
 __pycache__/
-*.pyc
+*.py[cod]
 
 #Virtual Environment
 .venv/
+venv/
+
+#Environment files and secrets
+.env
+.env.*
+!.env.example
 
 #VS Code
 .vscode/
+.idea/
+
+#Helm-generated output
+rendered.yaml
+*.tgz
 
 # macOS
 .DS_Store
+Thumbs.db

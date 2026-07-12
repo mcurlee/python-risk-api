@@ -5,12 +5,20 @@ app = FastAPI(title="Risk Calculator API")
 
 @app.get("/")
 def home():
-    return {"message": "Risk Calculator API", "status": "Running"}
+    return {"message": "Risk Calculator API", "status": "Running", "version": "1.1"}
 
 
 @app.get("/health")
 def health():
-    return {"status": "Healthy"}
+    return {
+        "application": "Risk Calculator API",
+        "version": "1.1",
+    }
+
+
+@app.get("/version")
+def version():
+    return {"version": "1.1"}
 
 
 @app.post("/risk")

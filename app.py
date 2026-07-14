@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import os
 
 app = FastAPI(title="Risk Calculator API")
 
@@ -11,14 +12,16 @@ def home():
 @app.get("/health")
 def health():
     return {
-        "application": "Risk Calculator API",
-        "version": "1.1",
+        "health": "Healthy",
     }
 
 
 @app.get("/version")
 def version():
-    return {"version": "1.1"}
+    return {
+        "application": "Risk Calculator API",
+        "version": "1.1",
+    }
 
 
 @app.post("/risk")
